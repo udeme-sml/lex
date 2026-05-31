@@ -38,7 +38,6 @@
     min-height: 100vh;
   }
 
-  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -71,16 +70,9 @@
   }
 
   nav ul { list-style: none; display: flex; gap: 1.75rem; }
-  nav a {
-    color: var(--text-sec);
-    text-decoration: none;
-    font-size: 0.83rem;
-    letter-spacing: 0.03em;
-    transition: color 0.2s;
-  }
+  nav a { color: var(--text-sec); text-decoration: none; font-size: 0.83rem; letter-spacing: 0.03em; transition: color 0.2s; }
   nav a:hover { color: var(--text); }
 
-  /* HERO */
   .hero {
     min-height: 100vh;
     display: flex;
@@ -145,7 +137,6 @@
 
   .pill strong { color: var(--text); font-weight: 500; }
 
-  /* LAYOUT */
   .page-wrap {
     display: grid;
     grid-template-columns: 220px 1fr;
@@ -154,7 +145,6 @@
     min-height: 100vh;
   }
 
-  /* SIDEBAR */
   .sidebar {
     position: sticky;
     top: 57px;
@@ -192,10 +182,8 @@
   .sidebar a:hover { color: var(--text); background: var(--bg-card); }
   .sidebar a.active { color: var(--text); border-left-color: var(--accent2); background: var(--bg-note); }
 
-  /* MAIN CONTENT */
   .main-content { padding: 3rem 3rem 5rem; }
 
-  /* SECTIONS */
   .doc-section { margin-bottom: 4rem; }
 
   .section-number {
@@ -217,7 +205,6 @@
     border-bottom: 1px solid var(--border);
   }
 
-  /* PROSE */
   .prose p {
     font-size: 0.92rem;
     color: var(--text-sec);
@@ -237,7 +224,6 @@
     letter-spacing: 0.06em;
   }
 
-  /* CARDS */
   .card-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -245,8 +231,7 @@
     margin-top: 1.25rem;
   }
 
-  .card-grid.three { grid-template-columns: repeat(3, 1fr); }
-  .card-grid.one   { grid-template-columns: 1fr; }
+  .card-grid.one { grid-template-columns: 1fr; }
 
   .card {
     background: var(--bg-card);
@@ -267,15 +252,71 @@
     margin-bottom: 0.5rem;
   }
 
-  .card-body {
-    font-size: 0.875rem;
-    color: var(--text-sec);
-    line-height: 1.75;
-  }
-
+  .card-body { font-size: 0.875rem; color: var(--text-sec); line-height: 1.75; }
   .card-body strong { color: var(--text); font-weight: 500; }
 
-  /* INLINE BADGE */
+  /* two-part feature card */
+  .bridge-card {
+    background: var(--bg-card);
+    border: 1px solid var(--accent2);
+    border-radius: 9px;
+    overflow: hidden;
+    margin-top: 1.25rem;
+  }
+
+  .bridge-card-header {
+    background: var(--bg-note);
+    padding: 0.9rem 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .bridge-card-header span {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--accent2);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .bridge-card-title {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    color: var(--text);
+  }
+
+  .bridge-parts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+  }
+
+  .bridge-part {
+    background: var(--bg-card);
+    padding: 1.25rem 1.4rem;
+  }
+
+  .bridge-part-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--text-sec);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+
+  .bridge-part-title {
+    font-size: 0.9rem;
+    color: var(--text);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .bridge-part-body { font-size: 0.83rem; color: var(--text-sec); line-height: 1.7; }
+
   .badge {
     display: inline-flex;
     align-items: center;
@@ -301,8 +342,8 @@
   .b-planned  { color: var(--text-sec); background: rgba(138,150,168,0.1); }
   .b-progress { color: var(--warn);     background: rgba(255,152,0,0.1); }
   .b-done     { color: var(--success);  background: rgba(76,175,80,0.1); }
+  .b-integrated { color: var(--accent2); background: rgba(56,81,162,0.12); }
 
-  /* PERSONAS MINI */
   .persona-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -332,7 +373,6 @@
   .p-mini-meta { font-size: 0.75rem; color: var(--text-sec); margin-bottom: 0.6rem; }
   .p-mini-desc { font-size: 0.78rem; color: var(--text-sec); line-height: 1.65; }
 
-  /* FEATURES TABLE */
   .feat-wrap {
     border: 1px solid var(--border);
     border-radius: 9px;
@@ -342,7 +382,7 @@
 
   .feat-row {
     display: grid;
-    grid-template-columns: 2fr 110px 3fr;
+    grid-template-columns: 2fr 130px 3fr;
     background: var(--bg-card);
   }
 
@@ -370,7 +410,6 @@
   .feat-name { color: var(--text); font-weight: 500; }
   .feat-desc { color: var(--text-sec); line-height: 1.6; font-size: 0.82rem; }
 
-  /* TIMELINE */
   .timeline { position: relative; margin-top: 1.25rem; }
 
   .timeline::before {
@@ -432,7 +471,6 @@
   .tl-title { font-size: 0.875rem; color: var(--text); font-weight: 500; }
   .tl-desc  { font-size: 0.78rem; color: var(--text-sec); margin-top: 0.2rem; line-height: 1.55; }
 
-  /* UPDATES */
   .updates { display: flex; flex-direction: column; gap: 10px; margin-top: 1.25rem; }
 
   .upd-card {
@@ -450,7 +488,6 @@
   .upd-title { font-size: 0.9rem; color: var(--text); font-weight: 500; margin-bottom: 0.45rem; }
   .upd-body  { font-size: 0.83rem; color: var(--text-sec); line-height: 1.75; }
 
-  /* EVAL TABLE */
   .eval-table {
     width: 100%;
     border-collapse: collapse;
@@ -485,7 +522,6 @@
   .eval-table tr:hover td { background: var(--bg-note); }
   .eval-table td:first-child { color: var(--text); font-weight: 500; }
 
-  /* FOOTER */
   footer {
     border-top: 1px solid var(--border);
     padding: 1.5rem 3rem;
@@ -509,8 +545,9 @@
     .sidebar { display: none; }
     .main-content { padding: 2rem 1.25rem 4rem; }
     .hero { padding: 6rem 1.25rem 3rem; }
-    .card-grid, .card-grid.three { grid-template-columns: 1fr; }
+    .card-grid { grid-template-columns: 1fr; }
     .persona-row { grid-template-columns: 1fr; }
+    .bridge-parts { grid-template-columns: 1fr; }
     .feat-row { grid-template-columns: 1fr; }
     .feat-cell { border-right: none; border-bottom: 1px solid var(--border); }
     .feat-cell:last-child { border-bottom: none; }
@@ -525,7 +562,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">Lex <span class="nav-tag">IFT3150</span></div>
   <ul>
@@ -537,7 +573,6 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
   <p class="hero-eyebrow">IFT3150 · Projet de cours · Université de Montréal</p>
   <h1>Lire la Bible <em>autrement</em></h1>
@@ -548,10 +583,8 @@
   </div>
 </div>
 
-<!-- MAIN LAYOUT -->
 <div class="page-wrap">
 
-  <!-- SIDEBAR -->
   <aside class="sidebar">
     <div class="sidebar-group">
       <p class="sidebar-label">Vue d'ensemble</p>
@@ -574,44 +607,24 @@
     </div>
   </aside>
 
-  <!-- CONTENT -->
   <main class="main-content">
 
     <div class="doc-section" id="contexte">
       <p class="section-number">01</p>
       <h2 class="section-title">Contexte</h2>
       <div class="prose">
-        <p>
-          Lex est une application mobile de lecture de la Bible développée en React Native et Expo,
-           déjà fonctionnelle avec des fonctionnalités de lecture, d'annotation, de signets et d'étiquettes.
-            L'application n'a pas encore été publiée en raison des exigences de test fermé de Google Play.
-        </p>
-        <p>
-          Ce projet de cours étend cette base existante en y intégrant l'intelligence artificielle. 
-          Le domaine des applications bibliques mobiles connaît une croissance importante, 
-          mais la grande majorité des solutions disponibles adoptent une approche uniforme qui 
-          ne tient pas compte du profil, du niveau de compréhension ou de la situation de vie de l'utilisateur.
-        </p>
-        <p>
-          L'IA générative, en particulier via des architectures de 
-          <strong>Génération Augmentée par Récupération (RAG)</strong>,
-           offre désormais la possibilité de produire des explications contextualisées, 
-           adaptées et personnalisées à partir de données structurées, sans inventer ni 
-           déformer le contenu source. C'est dans ce créneau que s'inscrit Lex.
-        </p>
+        <p>Lex est une application mobile de lecture de la Bible développée en React Native et Expo, déjà fonctionnelle avec des fonctionnalités de lecture, d'annotation, de signets et d'étiquettes. L'application n'a pas encore été publiée en raison des exigences de test fermé de Google Play.</p>
+        <p>Ce projet de cours étend cette base existante en y intégrant l'intelligence artificielle. Le domaine des applications bibliques mobiles connaît une croissance importante, mais la grande majorité des solutions disponibles adoptent une approche uniforme qui ne tient pas compte du profil, du niveau de compréhension ou de la situation de vie de l'utilisateur.</p>
+        <p>L'IA générative, en particulier via des architectures de <strong>Génération Augmentée par Récupération (RAG)</strong>, offre désormais la possibilité de produire des explications contextualisées, adaptées et personnalisées à partir de données structurées, sans inventer ni déformer le contenu source. C'est dans ce créneau que s'inscrit Lex.</p>
       </div>
       <div class="card-grid" style="margin-top:1.5rem;">
         <div class="card">
           <p class="card-label">Application existante</p>
-          <p class="card-body">React Native · Expo · lecture, signets, annotations, étiquettes, 
-            <strong>frontend uniquement</strong>, prêt à être étendu avec un backend et une couche IA.
-        </p>
+          <p class="card-body">React Native · Expo · lecture, signets, annotations, étiquettes — <strong>frontend uniquement</strong>, prêt à être étendu avec un backend et une couche IA.</p>
         </div>
         <div class="card">
           <p class="card-label">Extension proposée</p>
-          <p class="card-body">Ajout d'un backend Supabase + appels IA 
-            (Gemini Flash) pour des fonctionnalités de <strong>personnalisation et de compréhension</strong> propulsées par l'IA.
-        </p>
+          <p class="card-body">Ajout d'un backend Supabase + appels IA (Gemini Flash) pour des fonctionnalités de <strong>personnalisation et de compréhension</strong> propulsées par l'IA.</p>
         </div>
       </div>
     </div>
@@ -620,124 +633,87 @@
       <p class="section-number">02</p>
       <h2 class="section-title">Problématique</h2>
       <div class="prose">
-        <p>
-          La Bible est l'un des textes les plus lus au monde, mais aussi l'un des plus difficiles d'accès. 
-          Les obstacles sont multiples : distance culturelle et historique, complexité linguistique des traductions, 
-          registres théologiques variés selon les dénominations, et écart entre le contenu du texte et la vie quotidienne 
-          du lecteur moderne.
-        </p>
-        <p>
-          Les applications existantes ne résolvent pas ces obstacles, elles se contentent de numériser le texte. 
-          Un(e) adolescent(e) de 16 ans qui découvre la foi a besoin d'une expérience radicalement différente de celle d'un étudiant en théologie. 
-          Pourtant, les deux reçoivent exactement la même interface, les mêmes plans de lecture génériques, et aucune aide 
-          à la compréhension adaptée à leur niveau ou à leur contexte.
-        </p>
-        <p>
-          Il en résulte un fort taux d'abandon : les nouveaux lecteurs se sentent dépassés, les lecteurs intermédiaires plafonnent, 
-          et les lecteurs avancés n'ont pas accès à des outils d'analyse suffisamment rigoureux sans quitter 
-          l'application vers des ressources externes.
-        </p>
+        <p>La Bible est l'un des textes les plus lus au monde, mais aussi l'un des plus difficiles d'accès. Les obstacles sont multiples : distance culturelle et historique, complexité linguistique des traductions, registres théologiques variés selon les dénominations, et écart entre le contenu du texte et la vie quotidienne du lecteur moderne.</p>
+        <p>Les applications existantes ne résolvent pas ces obstacles, elles se contentent de numériser le texte. Un(e) adolescent(e) de 16 ans qui découvre la foi a besoin d'une expérience radicalement différente de celle d'un étudiant en théologie. Pourtant, les deux reçoivent exactement la même interface, les mêmes plans de lecture génériques, et aucune aide à la compréhension adaptée à leur niveau ou à leur contexte.</p>
+        <p>Il en résulte un fort taux d'abandon : les nouveaux lecteurs se sentent dépassés, les lecteurs intermédiaires plafonnent, et les lecteurs avancés n'ont pas accès à des outils d'analyse suffisamment rigoureux sans quitter l'application vers des ressources externes.</p>
       </div>
       <div class="card-grid one" style="margin-top:1.5rem;">
         <div class="card highlight">
           <p class="card-label">Question centrale du projet</p>
-          <p class="card-body" style="font-size:1rem; color:var(--text);">
-            Comment l'intelligence artificielle peut-elle rendre la lecture de la Bible 
-            <strong>accessible, personnalisée et significative</strong> pour les utilisateurs, qu'ils soient accompagnés ou autonomes, 
-            selon leur niveau de foi et leur situation de vie ?
-          </p>
+          <p class="card-body" style="font-size:1rem; color:var(--text);">Comment l'intelligence artificielle peut-elle rendre la lecture de la Bible <strong>accessible, personnalisée et significative</strong> pour les utilisateurs, qu'ils soient accompagnés ou autonomes, selon leur niveau de foi et leur situation de vie ?</p>
         </div>
       </div>
     </div>
 
     <div class="doc-section" id="proposition">
-        <p class="section-number">03</p>
-        <h2 class="section-title">Proposition et objectifs</h2>
-        <div class="prose">
-          <p>
-            Lex propose d'intégrer une couche d'intelligence artificielle à l'application existante, 
-            organisée autour d'un <strong>profil utilisateur évolutif</strong> composé de deux niveaux : 
-            un profil stable (âge, contexte spirituel, niveau de lecture préféré) et un profil volatile 
-            (situation de vie actuelle, état émotionnel, thèmes récemment explorés). Ce profil alimente 
-            chaque interaction avec l'IA pour produire des réponses véritablement adaptées.
-          </p>
+      <p class="section-number">03</p>
+      <h2 class="section-title">Proposition et objectifs</h2>
+      <div class="prose">
+        <p>Lex propose d'intégrer une couche d'intelligence artificielle à l'application existante, organisée autour d'un <strong>profil utilisateur évolutif</strong> composé de deux niveaux : un profil stable (âge, contexte spirituel, niveau de lecture préféré) et un profil volatile (thèmes récemment explorés, étiquettes et signets récents). Ce profil alimente chaque interaction avec l'IA pour produire des réponses véritablement adaptées.</p>
+      </div>
+
+      <div class="card-grid" style="margin-top:1.5rem;">
+        <div class="card">
+          <p class="card-label">Objectif principal</p>
+          <p class="card-body">Développer et évaluer un système d'IA intégré à une application mobile biblique qui <strong>adapte dynamiquement</strong> le contenu affiché au profil et à la situation de chaque utilisateur.</p>
         </div>
-   
-        <div class="card-grid" style="margin-top:1.5rem;">
-          <div class="card">
-            <p class="card-label">Objectif principal</p>
-            <p class="card-body">Développer et évaluer un système d'IA intégré à une application mobile biblique 
-                qui <strong>adapte dynamiquement</strong> le contenu affiché au profil et à la situation de chaque utilisateur.</p>
-          </div>
-          <div class="card">
-            <p class="card-label">Objectif secondaire</p>
-            <p class="card-body">Concevoir une <strong>architecture RAG robuste</strong> ancrant toutes les 
-                réponses de l'IA dans des sources vérifiables, prévenant les hallucinations et permettant une 
-                validation par un superviseur expert.</p>
-          </div>
-        </div>
-   
-        <div class="prose" style="margin-top:1.5rem;">
-          <h3>Trois fonctionnalités essentielles</h3>
-          <p>Ces trois fonctionnalités constituent le cœur du projet et feront l'objet d'une évaluation formelle.</p>
-        </div>
-   
-        <div class="feat-wrap">
-          <div class="feat-row feat-head">
-            <div class="feat-cell">Fonctionnalité</div>
-            <div class="feat-cell">Statut</div>
-            <div class="feat-cell">Valeur apportée</div>
-          </div>
-          <div class="feat-row">
-            <div class="feat-cell feat-name">Adaptation du niveau de lecture</div>
-            <div class="feat-cell"><span class="badge b-progress">En cours</span></div>
-            <div class="feat-cell feat-desc">Même verset expliqué en trois modes (Simple, Standard, Approfondi) 
-                selon le profil utilisateur. Première fonctionnalité à livrer, la plus démontrable visuellement.</div>
-          </div>
-          <div class="feat-row">
-            <div class="feat-cell feat-name">Contextualisation situationnelle</div>
-            <div class="feat-cell"><span class="badge b-progress">En cours</span></div>
-            <div class="feat-cell feat-desc">L'utilisateur décrit sa journée ou un événement important ou une situation spécifique; 
-                l'IA fait remonter des versets pertinents et explique leur lien avec la situation. Génère le profil volatile et 
-                différencie Lex de toutes les applications existantes.</div>
-          </div>
-          <div class="feat-row">
-            <div class="feat-cell feat-name">Explication en langue originale</div>
-            <div class="feat-cell"><span class="badge b-progress">En cours</span></div>
-            <div class="feat-cell feat-desc">Affiche les mots-clés grecs ou hébreux d'un verset avec
-                 leurs définitions (Concordance Strong's). Fonctionnalité académiquement la plus rigoureuse, 
-                 zéro hallucination possible grâce au RAG.</div>
-          </div>
-        </div>
-   
-        <div class="prose" style="margin-top:1.75rem;">
-          <h3>Fonctionnalités secondaires envisagées</h3>
-          <p>Ces fonctionnalités seront implémentées en complément si le calendrier le permet, 
-            sans faire l'objet d'une évaluation formelle.</p>
-        </div>
-   
-        <div class="feat-wrap">
-          <div class="feat-row feat-head">
-            <div class="feat-cell">Fonctionnalité</div>
-            <div class="feat-cell">Statut</div>
-            <div class="feat-cell">Description</div>
-          </div>
-          <div class="feat-row">
-            <div class="feat-cell feat-name">Dévotions personnalisées</div>
-            <div class="feat-cell"><span class="badge b-planned">Planifié</span></div>
-            <div class="feat-cell feat-desc">Réflexion quotidienne générée à partir des étiquettes 
-                et signets existants de l'utilisateur. Tire parti des données déjà présentes dans 
-                l'application et démontre la valeur de la personnalisation à long terme.</div>
-          </div>
-          <div class="feat-row">
-            <div class="feat-cell feat-name">Chatbot général (RAG)</div>
-            <div class="feat-cell"><span class="badge b-planned">Planifié</span></div>
-            <div class="feat-cell feat-desc">Interface conversationnelle permettant à l'utilisateur 
-                de poser des questions libres sur la Bible. Les réponses sont ancrées dans les données RAG, 
-                texte biblique, lexiques et commentaires, pour éviter toute hallucination.</div>
-          </div>
+        <div class="card">
+          <p class="card-label">Objectif secondaire</p>
+          <p class="card-body">Concevoir une <strong>architecture RAG robuste</strong> ancrant toutes les réponses de l'IA dans des sources vérifiables, prévenant les hallucinations et permettant une validation par un superviseur expert.</p>
         </div>
       </div>
+
+      <div class="prose" style="margin-top:1.75rem;">
+        <h3>Trois fonctionnalités essentielles</h3>
+        <p>Ces trois fonctionnalités constituent le cœur du projet et feront l'objet d'une évaluation formelle.</p>
+      </div>
+
+      <div class="feat-wrap">
+        <div class="feat-row feat-head">
+          <div class="feat-cell">Fonctionnalité</div>
+          <div class="feat-cell">Statut</div>
+          <div class="feat-cell">Valeur apportée</div>
+        </div>
+        <div class="feat-row">
+          <div class="feat-cell feat-name">Adaptation du niveau de lecture</div>
+          <div class="feat-cell"><span class="badge b-progress">En cours</span></div>
+          <div class="feat-cell feat-desc">Même verset expliqué en trois modes (Simple, Standard, Approfondi) selon le profil utilisateur. Première fonctionnalité à livrer, la plus démontrable visuellement.</div>
+        </div>
+        <div class="feat-row">
+          <div class="feat-cell feat-name">Explication en langue originale</div>
+          <div class="feat-cell"><span class="badge b-progress">En cours</span></div>
+          <div class="feat-cell feat-desc">Affiche les mots-clés grecs ou hébreux d'un verset avec leurs définitions (Concordance Strong's). Fonctionnalité académiquement la plus rigoureuse — zéro hallucination possible grâce au RAG.</div>
+        </div>
+        <div class="feat-row">
+          <div class="feat-cell feat-name">Contexte historique et pont contemporain</div>
+          <div class="feat-cell"><span class="badge b-integrated">Intégré</span></div>
+          <div class="feat-cell feat-desc">Panneau contextuel accessible au tap sur un verset — deux parties : le monde historique du texte (contexte de rédaction, audience originale, enjeux culturels) et le pont vers aujourd'hui (pourquoi ce verset est interprété différemment selon les traditions et les époques). Intégré à l'interface de lecture, pas une section à part.</div>
+        </div>
+      </div>
+
+      <div class="prose" style="margin-top:1.75rem;">
+        <h3>Fonctionnalités secondaires envisagées</h3>
+        <p>Ces fonctionnalités seront implémentées en complément si le calendrier le permet, sans faire l'objet d'une évaluation formelle.</p>
+      </div>
+
+      <div class="feat-wrap">
+        <div class="feat-row feat-head">
+          <div class="feat-cell">Fonctionnalité</div>
+          <div class="feat-cell">Statut</div>
+          <div class="feat-cell">Description</div>
+        </div>
+        <div class="feat-row">
+          <div class="feat-cell feat-name">Dévotions personnalisées</div>
+          <div class="feat-cell"><span class="badge b-planned">Planifié</span></div>
+          <div class="feat-cell feat-desc">Réflexion quotidienne générée à partir des étiquettes et signets existants de l'utilisateur. Tire parti des données déjà présentes dans l'application.</div>
+        </div>
+        <div class="feat-row">
+          <div class="feat-cell feat-name">Chatbot général (RAG)</div>
+          <div class="feat-cell"><span class="badge b-planned">Planifié</span></div>
+          <div class="feat-cell feat-desc">Interface conversationnelle pour des questions libres sur la Bible. Les réponses sont ancrées dans les données RAG — texte biblique, lexiques et commentaires — sans hallucination possible.</div>
+        </div>
+      </div>
+    </div>
 
     <div class="doc-section" id="methodologie">
       <p class="section-number">04</p>
@@ -745,24 +721,41 @@
 
       <div class="prose">
         <h3>Architecture technique</h3>
-        <p>L'application frontend existante (React Native / Expo) sera connectée à un backend 
-            léger sur <strong>Supabase</strong> (base de données PostgreSQL + fonctions Edge). 
-            Les appels à l'API IA transitent exclusivement par ce backend, les clés API ne touchent 
-            jamais le client mobile.</p>
+        <p>L'application frontend existante (React Native / Expo) sera connectée à un backend léger sur <strong>Supabase</strong> (base de données PostgreSQL + fonctions Edge). Les appels à l'API IA transitent exclusivement par ce backend — les clés API ne touchent jamais le client mobile.</p>
       </div>
 
       <div class="card-grid one" style="margin-top:1rem;">
         <div class="card highlight">
           <p class="card-label">Pipeline de données — Architecture RAG en 3 couches</p>
           <p class="card-body">
-            <strong>Couche 1 — Texte biblique :</strong> récupération des versets via API.Bible 
-            (API gratuite, données structurées par référence).<br><br>
-            <strong>Couche 2 — Données lexicales :</strong> Concordance Strong's en JSON 
-            (domaine public, disponible sur GitHub) liée aux mots originaux grecs/hébreux de chaque verset.<br><br>
-            <strong>Couche 3 — Commentaires et traditions :</strong> ensemble curé de commentaires du domaine public 
-            (Matthew Henry, Pères de l'Église) indexés par référence et tradition dénominationnelle.<br><br>
-            L'IA reçoit ces données injectées dans le prompt et raisonne à partir d'elles, elle ne génère jamais de contenu biblique de mémoire.
+            <strong>Couche 1 — Texte biblique :</strong> récupération des versets via API.Bible (API gratuite, données structurées par référence).<br><br>
+            <strong>Couche 2 — Données lexicales :</strong> Concordance Strong's en JSON (domaine public, disponible sur GitHub) liée aux mots originaux grecs/hébreux de chaque verset.<br><br>
+            <strong>Couche 3 — Commentaires et traditions :</strong> ensemble curé de commentaires du domaine public (Matthew Henry, Pères de l'Église, introductions aux livres bibliques) indexés par référence, époque et tradition dénominationnelle.<br><br>
+            L'IA reçoit ces données injectées dans le prompt et raisonne à partir d'elles — elle ne génère jamais de contenu biblique de mémoire.
           </p>
+        </div>
+      </div>
+
+      <div class="prose" style="margin-top:1.75rem;">
+        <h3>Contexte historique et pont contemporain — détail d'implémentation</h3>
+        <p>Cette fonctionnalité s'intègre directement dans l'interface de lecture existante via un panneau contextuel déclenché au tap sur un verset. Elle ne nécessite pas de nouvelle section dans la navigation.</p>
+      </div>
+
+      <div class="bridge-card">
+        <div class="bridge-card-header">
+          <span>Panneau contextuel — tap sur un verset</span>
+        </div>
+        <div class="bridge-parts">
+          <div class="bridge-part">
+            <p class="bridge-part-label">Partie 1</p>
+            <p class="bridge-part-title">Le monde du texte</p>
+            <p class="bridge-part-body">Qui a écrit ce passage, à qui, et dans quel contexte ? Quels étaient les enjeux politiques, culturels ou personnels au moment de la rédaction ? Par exemple, savoir que Paul écrivait depuis la prison transforme la lecture de Philippiens 4:7. Ces données proviennent des introductions aux livres bibliques et des commentaires historiques — toutes sources du domaine public injectées via RAG.</p>
+          </div>
+          <div class="bridge-part">
+            <p class="bridge-part-label">Partie 2</p>
+            <p class="bridge-part-title">Le pont vers aujourd'hui</p>
+            <p class="bridge-part-body">Pourquoi ce même verset est-il interprété différemment selon les traditions, les cultures ou les époques ? Qu'est-ce qui a changé entre le premier siècle et 2026 qui explique ces écarts de lecture ? Cette partie s'appuie sur les commentaires dénominationnels curés (catholique, protestant, orthodoxe) pour montrer la diversité des interprétations sans en valider une seule.</p>
+          </div>
         </div>
       </div>
 
@@ -774,14 +767,11 @@
       <div class="card-grid" style="margin-top:1rem;">
         <div class="card">
           <p class="card-label">Profil stable</p>
-          <p class="card-body">Âge, contexte spirituel, niveau de lecture préféré (Simple / Standard / Approfondi),
-             contexte d'usage (encadré ou autonome). Collecté à l'inscription, mis à jour manuellement.</p>
+          <p class="card-body">Âge, contexte spirituel, niveau de lecture préféré (Simple / Standard / Approfondi), contexte d'usage (encadré ou autonome). Collecté à l'inscription, mis à jour manuellement.</p>
         </div>
         <div class="card">
           <p class="card-label">Profil volatile</p>
-          <p class="card-body">Situation de vie actuelle (décrite par l'utilisateur),
-             thèmes récemment consultés, étiquettes et signets récents. Mis à jour à chaque session, 
-             expire après quelques jours.</p>
+          <p class="card-body">Thèmes récemment consultés, étiquettes et signets récents. Mis à jour à chaque session — oriente les suggestions et la tonalité des explications.</p>
         </div>
       </div>
 
@@ -794,31 +784,25 @@
           <div class="p-mini-av" style="background:rgba(59,86,120,0.2); color:#3B5678;">NM</div>
           <p class="p-mini-name">Naomi</p>
           <p class="p-mini-meta">16 ans · Lycée · Encadrée · Chrétienne de naissance</p>
-          <p class="p-mini-desc">A besoin d'accessibilité et de pertinence quotidienne. Fonctionnalités clés : 
-            adaptation du niveau, contextualisation.</p>
+          <p class="p-mini-desc">A besoin d'accessibilité et de pertinence quotidienne. Fonctionnalités clés : adaptation du niveau, contexte historique simplifié.</p>
         </div>
         <div class="p-mini primary">
           <div class="p-mini-av" style="background:rgba(56,81,162,0.2); color:#3851A2;">JK</div>
-          <p class="p-mini-name">Jordan<span style="font-size:0.65rem; color:var(--accent2);">· Principal</span></p>
-          <p class="p-mini-meta">21 ans · Université · Autonome · Croyant·e de retour</p>
-          <p class="p-mini-desc">A besoin de continuité et de pertinence situationnelle. Fonctionnalités clés : 
-            contextualisation, dévotions, profil volatile.</p>
+          <p class="p-mini-name">Jordan <span style="font-size:0.65rem; color:var(--accent2);">· Principal</span></p>
+          <p class="p-mini-meta">21 ans · Université · Autonome · Croyant de retour</p>
+          <p class="p-mini-desc">A besoin de comprendre pourquoi le texte est toujours pertinent. Fonctionnalités clés : pont contemporain, dévotions, profil volatile.</p>
         </div>
         <div class="p-mini">
           <div class="p-mini-av" style="background:rgba(156,39,176,0.15); color:#9C27B0;">TR</div>
           <p class="p-mini-name">Thomas</p>
           <p class="p-mini-meta">23 ans · Études sup. · Les deux · Curieux sans bagage</p>
-          <p class="p-mini-desc">A besoin de profondeur et de rigueur. Fonctionnalités clés : langue originale, 
-            approfondissement académique.</p>
+          <p class="p-mini-desc">A besoin de profondeur et de rigueur. Fonctionnalités clés : langue originale, contexte historique approfondi, divergences d'interprétation.</p>
         </div>
       </div>
 
       <div class="prose" style="margin-top:1.5rem;">
         <h3>Développement itératif</h3>
-        <p>Le projet suit les itérations hebdomadaires avec le superviseur prévues par le plan de cours. 
-            Chaque fonctionnalité est développée de bout en bout (pipeline → prompt → UI) avant de passer 
-            à la suivante. Les prompts sont considérés comme du code, versionnés, testés et soumis à validation 
-            par le superviseur avant déploiement.</p>
+        <p>Le projet suit les itérations hebdomadaires avec le superviseur prévues par le plan de cours. Chaque fonctionnalité est développée de bout en bout (pipeline → prompt → UI) avant de passer à la suivante. Les prompts sont considérés comme du code — versionnés, testés et soumis à validation par le superviseur avant déploiement.</p>
       </div>
     </div>
 
@@ -827,22 +811,13 @@
       <h2 class="section-title">Validation et évaluation</h2>
 
       <div class="prose">
-        <p>
-          La validation se déroule sur deux plans : <strong>technique</strong> (l'IA produit-elle des réponses 
-          correctes et non hallucinées ?) et <strong>pédagogique</strong> (les réponses aident-elles réellement à 
-          comprendre le texte ?).
-        </p>
+        <p>La validation se déroule sur deux plans : <strong>technique</strong> (l'IA produit-elle des réponses correctes et non hallucinées ?) et <strong>pédagogique</strong> (les réponses aident-elles réellement à comprendre le texte ?). Le professeur valide les gabarits de prompts pour chaque fonctionnalité avant déploiement.</p>
       </div>
 
       <div class="card-grid one" style="margin-top:1.25rem;">
         <div class="card accent-border">
           <p class="card-label">Stratégie anti-hallucination</p>
-          <p class="card-body">
-            Toute référence biblique citée par l'IA est <strong>vérifiée programmatiquement</strong> 
-            par recoupement avec la base de données source avant affichage. Si la référence ne correspond pas, 
-            la réponse est rejetée ou signalée. Les prompts systèmes interdisent explicitement à l'IA de citer des versets de mémoire, 
-            elle ne raisonne qu'à partir du texte injecté. Le professeur valide les gabarits de prompts pour chaque fonctionnalité.
-          </p>
+          <p class="card-body">Toute référence biblique citée par l'IA est <strong>vérifiée programmatiquement</strong> par recoupement avec la base de données source avant affichage. Si la référence ne correspond pas, la réponse est rejetée ou signalée. Les prompts systèmes interdisent explicitement à l'IA de citer des versets de mémoire — elle ne raisonne qu'à partir du texte injecté.</p>
         </div>
       </div>
 
@@ -865,39 +840,30 @@
             <td>Score de compréhension supérieur en mode adapté vs. texte brut</td>
           </tr>
           <tr>
-            <td>Contextualisation situationnelle</td>
-            <td>Note de pertinence perçue par l'utilisateur (1–5) après chaque suggestion de verset</td>
-            <td>Note moyenne ≥ 4 / 5 sur un panel de situations de test</td>
-          </tr>
-          <tr>
             <td>Explication en langue originale</td>
             <td>Vérification par recoupement avec la Concordance Strong's ; révision par le superviseur</td>
             <td>100 % des définitions vérifiables et confirmées par le superviseur</td>
           </tr>
           <tr>
-            <td>Dévotions personnalisées</td>
-            <td>Durée de session avec/sans dévotions ; pertinence perçue par rapport aux étiquettes utilisées</td>
-            <td>Durée de session plus longue et pertinence perçue ≥ 4 / 5</td>
+            <td>Contexte historique et pont contemporain</td>
+            <td>Note de pertinence perçue (1–5) et précision historique vérifiée par le superviseur sur un échantillon de versets représentatifs</td>
+            <td>Note moyenne ≥ 4/5 et aucune erreur factuelle non signalée sur l'échantillon superviseur</td>
           </tr>
         </tbody>
       </table>
 
       <div class="prose" style="margin-top:1.5rem;">
         <h3>Plan de tests utilisateurs</h3>
-        <p>
-          Les tests seront conduits avec des participants correspondant aux trois personas 
-          (recrutés dans l'entourage et via des groupes campus). Chaque participant réalise un scénario 
-          d'utilisation défini par persona, suivi d'un court questionnaire. 
-        </p>
+        <p>Les tests seront conduits avec des participants correspondant aux trois personas (recrutés dans l'entourage et via des groupes campus). Chaque participant réalise un scénario d'utilisation défini par persona, suivi d'un court questionnaire. Les résultats alimenteront les présentations de mise en commun et le rapport final.</p>
       </div>
     </div>
 
+    <!-- 06 PERSONAS -->
     <div class="doc-section" id="personas">
       <p class="section-number">06</p>
       <h2 class="section-title">Personas</h2>
       <div class="prose">
-        <p>Trois profils types couvrant la tranche d'âge 16–24 ans, avec des contextes de 
-            foi, d'usage et de besoins distincts. Chaque fonctionnalité IA est conçue en référence à ces personas.</p>
+        <p>Trois profils types couvrant la tranche d'âge 16–24 ans, avec des contextes de foi, d'usage et de besoins distincts. Chaque fonctionnalité IA est conçue en référence à ces personas.</p>
       </div>
       <div class="persona-row" style="margin-top:1.25rem;">
         <div class="p-mini" style="padding:1.4rem;">
@@ -905,9 +871,7 @@
           <p class="p-mini-name" style="font-size:0.95rem; margin-bottom:0.2rem;">Naomi</p>
           <p class="p-mini-meta">16 ans · Lycée · Contexte encadré</p>
           <p class="p-mini-meta" style="margin-bottom:0.75rem; color:#3B5678;">Chrétienne de naissance</p>
-          <p class="p-mini-desc">A grandi à l'église mais n'a jamais vraiment accroché. 
-            Se sent exclue lors des discussions au groupe de jeunes. A besoin que le texte soit ancré 
-            dans sa vie quotidienne sans être condescendant.</p>
+          <p class="p-mini-desc">A grandi à l'église mais n'a jamais vraiment accroché. Se sent exclue lors des discussions au groupe de jeunes. A besoin que le texte soit ancré dans sa vie quotidienne sans être condescendant.</p>
         </div>
         <div class="p-mini primary" style="padding:1.4rem;">
           <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
@@ -917,16 +881,14 @@
           <p class="p-mini-name" style="font-size:0.95rem; margin-bottom:0.2rem;">Jordan</p>
           <p class="p-mini-meta">21 ans · Université · Usage autonome</p>
           <p class="p-mini-meta" style="margin-bottom:0.75rem; color:#3851A2;">Croyant de retour</p>
-          <p class="p-mini-desc">Re-noue avec la foi pendant une période difficile à l'université. Ouvre 
-            l'app quand la vie est dure. A besoin que la Bible le rejoigne là où il est et l'accompagne dans la durée.</p>
+          <p class="p-mini-desc">Re-noue avec la foi pendant une période difficile à l'université. Ouvre l'app quand la vie est dure. A besoin que la Bible le rejoigne là où il est et l'accompagne dans la durée.</p>
         </div>
         <div class="p-mini" style="padding:1.4rem;">
           <div class="p-mini-av" style="background:rgba(156,39,176,0.15); color:#9C27B0; width:40px; height:40px; font-size:0.75rem;">TR</div>
           <p class="p-mini-name" style="font-size:0.95rem; margin-bottom:0.2rem;">Thomas</p>
           <p class="p-mini-meta">23 ans · Études supérieures · Les deux contextes</p>
           <p class="p-mini-meta" style="margin-bottom:0.75rem; color:#8A96A8;">Curieux sans bagage religieux</p>
-          <p class="p-mini-desc">Aucun bagage religieux. Aborde le texte comme un document académique. 
-            Frustré par les incohérences de traduction, veut comprendre le sens original et voir où les interprétations divergent.</p>
+          <p class="p-mini-desc">Aucun bagage religieux. Aborde le texte comme un document académique. Frustré par les incohérences de traduction, veut comprendre le sens original et voir où les interprétations divergent.</p>
         </div>
       </div>
     </div>
@@ -934,6 +896,12 @@
     <div class="doc-section" id="fonctionnalites">
       <p class="section-number">07</p>
       <h2 class="section-title">Fonctionnalités</h2>
+
+      <div class="prose">
+        <h3>Fonctionnalités essentielles</h3>
+        <p>Les trois fonctionnalités principales du projet, évaluées formellement selon les critères définis en section 05.</p>
+      </div>
+
       <div class="feat-wrap">
         <div class="feat-row feat-head">
           <div class="feat-cell">Fonctionnalité</div>
@@ -943,51 +911,68 @@
         <div class="feat-row">
           <div class="feat-cell feat-name">Adaptation du niveau de lecture</div>
           <div class="feat-cell"><span class="badge b-progress">En cours</span></div>
-          <div class="feat-cell feat-desc">Trois modes : Anglais simple, Standard, Approfondissement académique. 
-            Le même passage est expliqué différemment selon le profil de l'utilisateur.</div>
-        </div>
-        <div class="feat-row">
-          <div class="feat-cell feat-name">Contextualisation situationnelle</div>
-          <div class="feat-cell"><span class="badge b-progress">En cours</span></div>
-          <div class="feat-cell feat-desc">L'utilisateur décrit sa journée ou sa situation. 
-            L'IA fait remonter des versets spécifiques et explique comment ils s'appliquent à ce contexte précis.</div>
+          <div class="feat-cell feat-desc">Trois modes : Simple, Standard, Approfondissement académique. Le même passage est expliqué différemment selon le profil de l'utilisateur.</div>
         </div>
         <div class="feat-row">
           <div class="feat-cell feat-name">Explication en langue originale</div>
-          <div class="feat-cell"><span class="badge b-planned">Planifié</span></div>
-          <div class="feat-cell feat-desc">En appuyant sur un verset, l'utilisateur voit les 
-            mots-clés grecs ou hébreux avec leurs définitions issues de la Concordance Strong's.</div>
+          <div class="feat-cell"><span class="badge b-progress">En cours</span></div>
+          <div class="feat-cell feat-desc">En appuyant sur un verset, l'utilisateur voit les mots-clés grecs ou hébreux avec leurs définitions issues de la Concordance Strong's.</div>
+        </div>
+        <div class="feat-row">
+          <div class="feat-cell feat-name">Contexte historique et pont contemporain</div>
+          <div class="feat-cell"><span class="badge b-integrated">Intégré</span></div>
+          <div class="feat-cell feat-desc">Panneau contextuel au tap sur un verset. Partie 1 : le monde du texte (contexte de rédaction, audience originale, enjeux culturels et historiques). Partie 2 : le pont vers aujourd'hui (pourquoi ce verset est interprété différemment selon les traditions et les époques). Intégré à l'interface de lecture existante.</div>
+        </div>
+      </div>
+
+      <div class="prose" style="margin-top:1.75rem;">
+        <h3>Fonctionnalités secondaires</h3>
+        <p>Implémentées en complément si le calendrier le permet.</p>
+      </div>
+
+      <div class="feat-wrap">
+        <div class="feat-row feat-head">
+          <div class="feat-cell">Fonctionnalité</div>
+          <div class="feat-cell">Statut</div>
+          <div class="feat-cell">Description</div>
         </div>
         <div class="feat-row">
           <div class="feat-cell feat-name">Dévotions personnalisées</div>
           <div class="feat-cell"><span class="badge b-planned">Planifié</span></div>
-          <div class="feat-cell feat-desc">Réflexion quotidienne générée à partir des étiquettes et 
-            signets de l'utilisateur. Crée un fil narratif à travers son propre historique d'étude.</div>
+          <div class="feat-cell feat-desc">Réflexion quotidienne générée à partir des étiquettes et signets de l'utilisateur. Crée un fil narratif à travers son propre historique d'étude.</div>
+        </div>
+        <div class="feat-row">
+          <div class="feat-cell feat-name">Chatbot général (RAG)</div>
+          <div class="feat-cell"><span class="badge b-planned">Planifié</span></div>
+          <div class="feat-cell feat-desc">Interface conversationnelle pour des questions libres sur la Bible. Les réponses sont ancrées dans les données RAG — texte biblique, lexiques et commentaires.</div>
         </div>
       </div>
     </div>
 
+    <!-- 08 CALENDRIER -->
     <div class="doc-section" id="calendrier">
       <p class="section-number">08</p>
       <h2 class="section-title">Calendrier</h2>
       <div class="timeline">
         <div class="tl-row"><div class="tl-week">S1–2</div><div><div class="tl-card done"><p class="tl-title">Idéation et planification</p><p class="tl-desc">Exploration des fonctionnalités, recherches préliminaires, définition du périmètre.</p></div></div></div>
-        <div class="tl-row"><div class="tl-week">S3</div><div><div class="tl-card current"><p class="tl-milestone">Maintenant</p><p class="tl-title">Mise en place des fondations</p><p class="tl-desc">Validation du périmètre. Personas définis. Backend Supabase, API.Bible + Strong's, premier appel IA de bout en bout.</p></div></div></div>
-        <div class="tl-row"><div class="tl-week">S4–5</div><div><div class="tl-card"><p class="tl-milestone">Mise en commun I</p><p class="tl-title">Première fonctionnalité + présentation</p><p class="tl-desc">Adaptation du niveau de lecture fonctionnelle. Présentation des personas, architecture et démo en direct.</p></div></div></div>
-        <div class="tl-row"><div class="tl-week">S5–8</div><div><div class="tl-card"><p class="tl-title">Développement principal</p><p class="tl-desc">Contextualisation situationnelle → Explication en langue originale → Dévotions personnalisées.</p></div></div></div>
-        <div class="tl-row"><div class="tl-week">S7–8</div><div><div class="tl-card"><p class="tl-milestone">Mise en commun II</p><p class="tl-title">Présentation de l'avancement</p><p class="tl-desc">Démonstration des fonctionnalités développées. Discussions inter-équipes et retours.</p></div></div></div>
-        <div class="tl-row"><div class="tl-week">S9–10</div><div><div class="tl-card"><p class="tl-title">Peaufinage et tests</p><p class="tl-desc">Raffinement des prompts avec validation superviseur. Tests utilisateurs par persona.</p></div></div></div>
-        <div class="tl-row"><div class="tl-week">S11–12</div><div><div class="tl-card"><p class="tl-milestone">Mise en commun III</p><p class="tl-title">Présentation finale et retours collectifs</p><p class="tl-desc">Toutes les fonctionnalités complètes. Données de tests et évaluation par persona.</p></div></div></div>
+        <div class="tl-row"><div class="tl-week">S3–4</div><div><div class="tl-card current"><p class="tl-milestone">Maintenant</p><p class="tl-title">Validation du projet + mise en place des fondations</p><p class="tl-desc">Mise en commun I. Validation des personas et du périmètre par le superviseur. Initialisation du backend Supabase, API.Bible + Strong's, premier appel IA de bout en bout.</p></div></div></div>
+        <div class="tl-row"><div class="tl-week">S5–6</div><div><div class="tl-card"><p class="tl-title">Adaptation du niveau de lecture</p><p class="tl-desc">Fonctionnalité complète de bout en bout : pipeline RAG → prompt → UI. Trois modes opérationnels et testés.</p></div></div></div>
+        <div class="tl-row"><div class="tl-week">S6–7</div><div><div class="tl-card"><p class="tl-title">Explication en langue originale</p><p class="tl-desc">Intégration de la Concordance Strong's. Panneau lexical au tap sur un verset. Validation superviseur.</p></div></div></div>
+        <div class="tl-row"><div class="tl-week">S7–8</div><div><div class="tl-card"><p class="tl-milestone">Mise en commun II</p><p class="tl-title">Présentation de l'avancement</p><p class="tl-desc">Démonstration des deux premières fonctionnalités. Discussions inter-équipes et retours.</p></div></div></div>
+        <div class="tl-row"><div class="tl-week">S8–10</div><div><div class="tl-card"><p class="tl-title">Contexte historique et pont contemporain</p><p class="tl-desc">Intégration des commentaires historiques et dénominationnels. Panneau contextuel dans l'interface de lecture. Tests par persona.</p></div></div></div>
+        <div class="tl-row"><div class="tl-week">S10–11</div><div><div class="tl-card"><p class="tl-title">Fonctionnalités secondaires + peaufinage</p><p class="tl-desc">Dévotions personnalisées et/ou chatbot RAG si le calendrier le permet. Raffinement des prompts.</p></div></div></div>
+        <div class="tl-row"><div class="tl-week">S11–12</div><div><div class="tl-card"><p class="tl-milestone">Mise en commun III</p><p class="tl-title">Présentation finale et retours collectifs</p><p class="tl-desc">Toutes les fonctionnalités essentielles complètes. Données de tests utilisateurs et évaluation par persona.</p></div></div></div>
         <div class="tl-row"><div class="tl-week">S13</div><div><div class="tl-card"><p class="tl-milestone">Foire</p><p class="tl-title">Kiosque de démonstration</p><p class="tl-desc">Démo en direct. Pitch de 60 secondes avec les trois personas illustrées.</p></div></div></div>
         <div class="tl-row"><div class="tl-week">S14–15</div><div><div class="tl-card"><p class="tl-milestone">Final</p><p class="tl-title">Présentation finale et dépôt du rapport</p><p class="tl-desc">Rapport couvrant architecture, RAG, stratégie anti-hallucination et résultats d'évaluation.</p></div></div></div>
       </div>
     </div>
 
-    <!-- ── JOURNAL ── -->
+    <!-- 09 JOURNAL -->
     <div class="doc-section" id="journal">
       <p class="section-number">09</p>
       <h2 class="section-title">Journal de bord</h2>
       <div class="updates">
+
         <div class="upd-card">
           <div class="upd-week">Semaine 2</div>
           <div>
@@ -998,6 +983,7 @@
                 le professeur, initialisation du backend Supabase, test du pipeline IA de bout en bout.</p>
           </div>
         </div>
+
         <div class="upd-card" style="opacity:0.35;">
           <div class="upd-week">Semaine 3</div>
           <div>
@@ -1005,6 +991,7 @@
             <p class="upd-body">Le journal sera mis à jour après chaque rencontre hebdomadaire avec le superviseur.</p>
           </div>
         </div>
+
       </div>
     </div>
 
