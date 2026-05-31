@@ -619,7 +619,7 @@
       <div class="card-grid" style="margin-top:1.5rem;">
         <div class="card">
           <p class="card-label">Application existante</p>
-          <p class="card-body">React Native · Expo · lecture, signets, annotations, étiquettes — <strong>frontend uniquement</strong>, prêt à être étendu avec un backend et une couche IA.</p>
+          <p class="card-body">React Native · Expo · lecture, signets, annotations, étiquettes, <strong>frontend uniquement</strong>, prêt à être étendu avec un backend et une couche IA.</p>
         </div>
         <div class="card">
           <p class="card-label">Extension proposée</p>
@@ -681,12 +681,12 @@
         <div class="feat-row">
           <div class="feat-cell feat-name">Explication en langue originale</div>
           <div class="feat-cell"><span class="badge b-progress">En cours</span></div>
-          <div class="feat-cell feat-desc">Affiche les mots-clés grecs ou hébreux d'un verset avec leurs définitions (Concordance Strong's). Fonctionnalité académiquement la plus rigoureuse — zéro hallucination possible grâce au RAG.</div>
+          <div class="feat-cell feat-desc">Affiche les mots-clés grecs ou hébreux d'un verset avec leurs définitions (Concordance Strong's). Fonctionnalité académiquement la plus rigoureuse, zéro hallucination possible grâce au RAG.</div>
         </div>
         <div class="feat-row">
           <div class="feat-cell feat-name">Contexte historique et pont contemporain</div>
           <div class="feat-cell"><span class="badge b-progress">En cours</span></div>
-          <div class="feat-cell feat-desc">Panneau contextuel accessible au tap sur un verset — deux parties : le monde historique du texte (contexte de rédaction, audience originale, enjeux culturels) et le pont vers aujourd'hui (pourquoi ce verset est interprété différemment selon les traditions et les époques). Intégré à l'interface de lecture, pas une section à part.</div>
+          <div class="feat-cell feat-desc">Panneau contextuel accessible au tap sur un verset, deux parties : le monde historique du texte (contexte de rédaction, audience originale, enjeux culturels) et le pont vers aujourd'hui (pourquoi ce verset est interprété différemment selon les traditions et les époques). Intégré à l'interface de lecture, pas une section à part.</div>
         </div>
       </div>
 
@@ -709,7 +709,7 @@
         <div class="feat-row">
           <div class="feat-cell feat-name">Chatbot général (RAG)</div>
           <div class="feat-cell"><span class="badge b-planned">Planifié</span></div>
-          <div class="feat-cell feat-desc">Interface conversationnelle pour des questions libres sur la Bible. Les réponses sont ancrées dans les données RAG — texte biblique, lexiques et commentaires — sans hallucination possible.</div>
+          <div class="feat-cell feat-desc">Interface conversationnelle pour des questions libres sur la Bible. Les réponses sont ancrées dans les données RAG, texte biblique, lexiques et commentaires, sans hallucination possible.</div>
         </div>
       </div>
     </div>
@@ -720,12 +720,12 @@
 
       <div class="prose">
         <h3>Architecture technique</h3>
-        <p>L'application frontend existante (React Native / Expo) sera connectée à un backend léger sur <strong>Supabase</strong> (base de données PostgreSQL + fonctions Edge). Les appels à l'API IA transitent exclusivement par ce backend — les clés API ne touchent jamais le client mobile.</p>
+        <p>L'application frontend existante (React Native / Expo) sera connectée à un backend léger sur <strong>Supabase</strong> (base de données PostgreSQL + fonctions Edge). Les appels à l'API IA transitent exclusivement par ce backend, les clés API ne touchent jamais le client mobile.</p>
       </div>
 
       <div class="card-grid one" style="margin-top:1rem;">
         <div class="card highlight">
-          <p class="card-label">Pipeline de données — Architecture RAG en 3 couches</p>
+          <p class="card-label">Pipeline de données: Architecture RAG en 3 couches</p>
           <p class="card-body">
             <strong>Couche 1 — Texte biblique :</strong> récupération des versets via API.Bible (API gratuite, données structurées par référence).<br><br>
             <strong>Couche 2 — Données lexicales :</strong> Concordance Strong's en JSON (domaine public, disponible sur GitHub) liée aux mots originaux grecs/hébreux de chaque verset.<br><br>
@@ -736,19 +736,19 @@
       </div>
 
       <div class="prose" style="margin-top:1.75rem;">
-        <h3>Contexte historique et pont contemporain — détail d'implémentation</h3>
+        <h3>Contexte historique et pont contemporain : détail d'implémentation</h3>
         <p>Cette fonctionnalité s'intègre directement dans l'interface de lecture existante via un panneau contextuel déclenché au tap sur un verset. Elle ne nécessite pas de nouvelle section dans la navigation.</p>
       </div>
 
       <div class="bridge-card">
         <div class="bridge-card-header">
-          <span>Panneau contextuel — tap sur un verset</span>
+          <span>Panneau contextuel, tap sur un verset</span>
         </div>
         <div class="bridge-parts">
           <div class="bridge-part">
             <p class="bridge-part-label">Partie 1</p>
             <p class="bridge-part-title">Le monde du texte</p>
-            <p class="bridge-part-body">Qui a écrit ce passage, à qui, et dans quel contexte ? Quels étaient les enjeux politiques, culturels ou personnels au moment de la rédaction ? Par exemple, savoir que Paul écrivait depuis la prison transforme la lecture de Philippiens 4:7. Ces données proviennent des introductions aux livres bibliques et des commentaires historiques — toutes sources du domaine public injectées via RAG.</p>
+            <p class="bridge-part-body">Qui a écrit ce passage, à qui, et dans quel contexte ? Quels étaient les enjeux politiques, culturels ou personnels au moment de la rédaction ? Par exemple, savoir que Paul écrivait depuis la prison transforme la lecture de Philippiens 4:7. Ces données proviennent des introductions aux livres bibliques et des commentaires historiques, toutes sources du domaine public injectées via RAG.</p>
           </div>
           <div class="bridge-part">
             <p class="bridge-part-label">Partie 2</p>
@@ -770,7 +770,7 @@
         </div>
         <div class="card">
           <p class="card-label">Profil volatile</p>
-          <p class="card-body">Thèmes récemment consultés, étiquettes et signets récents. Mis à jour à chaque session — oriente les suggestions et la tonalité des explications.</p>
+          <p class="card-body">Thèmes récemment consultés, étiquettes et signets récents. Mis à jour à chaque session, oriente les suggestions et la tonalité des explications.</p>
         </div>
       </div>
 
@@ -801,7 +801,7 @@
 
       <div class="prose" style="margin-top:1.5rem;">
         <h3>Développement itératif</h3>
-        <p>Le projet suit les itérations hebdomadaires avec le superviseur prévues par le plan de cours. Chaque fonctionnalité est développée de bout en bout (pipeline → prompt → UI) avant de passer à la suivante. Les prompts sont considérés comme du code — versionnés, testés et soumis à validation par le superviseur avant déploiement.</p>
+        <p>Le projet suit les itérations hebdomadaires avec le superviseur prévues par le plan de cours. Chaque fonctionnalité est développée de bout en bout (pipeline → prompt → UI) avant de passer à la suivante. Les prompts sont considérés comme du code, versionnés, testés et soumis à validation par le superviseur avant déploiement.</p>
       </div>
     </div>
 
@@ -816,7 +816,7 @@
       <div class="card-grid one" style="margin-top:1.25rem;">
         <div class="card accent-border">
           <p class="card-label">Stratégie anti-hallucination</p>
-          <p class="card-body">Toute référence biblique citée par l'IA est <strong>vérifiée programmatiquement</strong> par recoupement avec la base de données source avant affichage. Si la référence ne correspond pas, la réponse est rejetée ou signalée. Les prompts systèmes interdisent explicitement à l'IA de citer des versets de mémoire — elle ne raisonne qu'à partir du texte injecté.</p>
+          <p class="card-body">Toute référence biblique citée par l'IA est <strong>vérifiée programmatiquement</strong> par recoupement avec la base de données source avant affichage. Si la référence ne correspond pas, la réponse est rejetée ou signalée. Les prompts systèmes interdisent explicitement à l'IA de citer des versets de mémoire, elle ne raisonne qu'à partir du texte injecté.</p>
         </div>
       </div>
 
@@ -943,7 +943,7 @@
         <div class="feat-row">
           <div class="feat-cell feat-name">Chatbot général (RAG)</div>
           <div class="feat-cell"><span class="badge b-planned">Planifié</span></div>
-          <div class="feat-cell feat-desc">Interface conversationnelle pour des questions libres sur la Bible. Les réponses sont ancrées dans les données RAG — texte biblique, lexiques et commentaires.</div>
+          <div class="feat-cell feat-desc">Interface conversationnelle pour des questions libres sur la Bible. Les réponses sont ancrées dans les données RAG, texte biblique, lexiques et commentaires.</div>
         </div>
       </div>
     </div>
