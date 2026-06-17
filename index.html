@@ -676,7 +676,7 @@
         <div class="feat-row">
           <div class="feat-cell feat-name">Adaptation du niveau de lecture</div>
           <div class="feat-cell"><span class="badge b-progress">En cours</span></div>
-          <div class="feat-cell feat-desc">Même verset expliqué en trois modes (Simple, Standard, Approfondi) selon le profil utilisateur. Première fonctionnalité à livrer, la plus démontrable visuellement.</div>
+          <div class="feat-cell feat-desc">Explainer de base opérationnel en trois modes (Simple, Standard, Approfondi), sélection manuelle pour l'instant. La personnalisation automatique via le profil utilisateur et le pipeline RAG restent à brancher.</div>
         </div>
         <div class="feat-row">
           <div class="feat-cell feat-name">Explication en langue originale</div>
@@ -910,7 +910,7 @@
         <div class="feat-row">
           <div class="feat-cell feat-name">Adaptation du niveau de lecture</div>
           <div class="feat-cell"><span class="badge b-progress">En cours</span></div>
-          <div class="feat-cell feat-desc">Trois modes : Simple, Standard, Approfondissement académique. Le même passage est expliqué différemment selon le profil de l'utilisateur.</div>
+          <div class="feat-cell feat-desc">Explainer de base avec trois modes (Simple, Standard, Approfondissement académique), sélectionnables manuellement. Pas encore de personnalisation automatique selon le profil utilisateur — l'authentification frontend n'est pas encore implémentée.</div>
         </div>
         <div class="feat-row">
           <div class="feat-cell feat-name">Explication en langue originale</div>
@@ -954,7 +954,7 @@
       <h2 class="section-title">Calendrier</h2>
       <div class="timeline">
         <div class="tl-row"><div class="tl-week">S1–2</div><div><div class="tl-card done"><p class="tl-title">Idéation et planification</p><p class="tl-desc">Exploration des fonctionnalités, recherches préliminaires, définition du périmètre.</p></div></div></div>
-        <div class="tl-row"><div class="tl-week">S3–4</div><div><div class="tl-card current"><p class="tl-milestone">Maintenant</p><p class="tl-title">Validation du projet + mise en place des fondations</p><p class="tl-desc">Mise en commun I. Validation des personas et du périmètre par le superviseur. Initialisation du backend Supabase, API.Bible + Strong's, premier appel IA de bout en bout.</p></div></div></div>
+        <div class="tl-row"><div class="tl-week">S3–4</div><div><div class="tl-card current"><p class="tl-milestone">Maintenant</p><p class="tl-title">Validation du projet + mise en place des fondations</p><p class="tl-desc">Backend Supabase opérationnel (Gemini API, tables profils stable et volatile). Explainer de base avec trois modes, sans RAG ni personnalisation automatique. Intégration de la Concordance Strong's en cours.</p></div></div></div>
         <div class="tl-row"><div class="tl-week">S5–6</div><div><div class="tl-card"><p class="tl-title">Adaptation du niveau de lecture</p><p class="tl-desc">Fonctionnalité complète de bout en bout : pipeline RAG → prompt → UI. Trois modes opérationnels et testés.</p></div></div></div>
         <div class="tl-row"><div class="tl-week">S6–7</div><div><div class="tl-card"><p class="tl-title">Explication en langue originale</p><p class="tl-desc">Intégration de la Concordance Strong's. Panneau lexical au tap sur un verset. Validation superviseur.</p></div></div></div>
         <div class="tl-row"><div class="tl-week">S7–8</div><div><div class="tl-card"><p class="tl-milestone">Mise en commun II</p><p class="tl-title">Présentation de l'avancement</p><p class="tl-desc">Démonstration des deux premières fonctionnalités. Discussions inter-équipes et retours.</p></div></div></div>
@@ -983,8 +983,16 @@
           </div>
         </div>
 
-        <div class="upd-card" style="opacity:0.35;">
+        <div class="upd-card">
           <div class="upd-week">Semaine 3</div>
+          <div>
+            <p class="upd-title">Backend opérationnel, explainer de base avec trois modes</p>
+            <p class="upd-body">Mise en place du backend Supabase prêt à recevoir l'implémentation : intégration Gemini API pour l'explainer, schéma de base de données avec tables pour les informations utilisateur, profils stable et volatile. Côté frontend, un explainer de base fonctionne avec trois modes (Simple, Standard, Approfondi), mais sans pipeline RAG pour l'instant — l'injection de la Concordance Strong's dans le backend est en cours. L'authentification n'est pas encore implémentée côté frontend : l'utilisateur choisit manuellement son niveau d'explication, sans adaptation automatique au profil. Prochaines étapes : finaliser l'intégration Strong's et le RAG, puis brancher l'authentification et la personnalisation par profil.</p>
+          </div>
+        </div>
+
+        <div class="upd-card" style="opacity:0.35;">
+          <div class="upd-week">Semaine 4</div>
           <div>
             <p class="upd-title">Mise à jour à venir</p>
             <p class="upd-body">Le journal sera mis à jour après chaque rencontre hebdomadaire avec le superviseur.</p>
@@ -999,7 +1007,7 @@
 
 <footer>
   <p class="footer-l">Lex — IFT3150 · Projet de cours</p>
-  <p class="footer-r">Mis à jour semaine 2</p>
+  <p class="footer-r">Mis à jour semaine 3</p>
 </footer>
 
 </body>
